@@ -1,8 +1,7 @@
 ﻿
 using SimpleBot.Repository.Interfaces;
 using SimpleBot.Repository.MongoDB;
-using SimpleBot.Repository.SqlServer;
-using System;
+
 
 namespace SimpleBot.Logic
 {

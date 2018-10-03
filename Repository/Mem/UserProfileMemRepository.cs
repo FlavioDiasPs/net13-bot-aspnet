@@ -11,7 +11,12 @@ namespace SimpleBot.Repository.Mem
             throw new NotImplementedException();
         }
 
-        public long SetProfile(UserProfile profile)
+        public UserProfile InsertProfile(string Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool SetProfile(UserProfile profile)
         {
             throw new NotImplementedException();
         }
