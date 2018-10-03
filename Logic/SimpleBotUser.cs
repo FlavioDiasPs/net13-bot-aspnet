@@ -8,14 +8,17 @@ namespace SimpleBot.Logic
 {
     public class SimpleBotUser
     {
+        // usar o construtor para definir o objeto corretamente
+        public static IUserProfileRepository _userProfileRepo = new Repo(blablabla..);
 
         public static string Reply(Message message)
         {
             InserirMensagemMongoDb(message);
 
-            var profile = GetProfile(message.Id);            
+            // usar o objeto _userProfileRepo
+            var profile = _userProfileRepo.GetProfile(message.Id);            
             SetProfile(profile);
-            profile = GetProfile(message.Id);
+            profile = _userProfileRepo.GetProfile(message.Id);
 
             return $"{message.User} disse '{message.Text}' e mandou {profile.QtdMensagens} mensagens.";
         }

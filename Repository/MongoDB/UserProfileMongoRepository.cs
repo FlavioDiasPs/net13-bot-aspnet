@@ -4,6 +4,7 @@ using System;
 
 namespace SimpleBot.Repository.MongoDB
 {
+    // Nao implementado?
     public class UserProfileMongoRepository : IUserProfileRepository
     {
         public UserProfile GetProfile(string id)
