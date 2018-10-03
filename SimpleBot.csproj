@@ -139,7 +139,7 @@
   <ItemGroup>
     <Compile Include="Config\SqlServerConfiguration.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
-    <Compile Include="Logic\MongoDbSimpleBotUser.cs" />
+    <Compile Include="Logic\SimpleBotUser.cs" />
     <Compile Include="Repository\MongoDB\UserProfileMongo.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -147,20 +147,17 @@
     <Compile Include="Repository\Interfaces\IUserProfileRepository.cs" />
     <Compile Include="Logic\Message.cs" />
     <Compile Include="Config\MongoDbConfiguration.cs" />
-    <Compile Include="Logic\SqlServerSimpleBotUser.cs" />
     <Compile Include="Logic\UserProfile.cs" />
     <Compile Include="Repository\Mem\UserProfileMemRepository.cs" />
     <Compile Include="Repository\MongoDB\UserProfileMongoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\SqlServer\SqlServerUserProfile.cs" />
-    <Compile Include="Repository\SqlServer\SqlServerUserProfileRepository.cs" />
+    <Compile Include="Repository\SqlServer\UserProfileSqlServer.cs" />
+    <Compile Include="Repository\SqlServer\UserProfileSqlServerRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Shared\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

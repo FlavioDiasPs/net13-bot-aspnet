@@ -6,6 +6,9 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using Microsoft.Bot.Connector;
 using SimpleBot.Logic;
+using SimpleBot.Repository.Interfaces;
+using SimpleBot.Repository.MongoDB;
+using SimpleBot.Repository.SqlServer;
 
 namespace SimpleBot
 {
@@ -33,7 +36,10 @@ namespace SimpleBot
 
             var message = new Message(userFromId, userFromName, text);
 
-            string response = SqlServerSimpleBotUser.Reply(message);
+            IUserProfileRepository repository = text.Contains("Mongo") ? 
+                (IUserProfileRepository) new UserProfileMongoRepository() : new UserProfileSqlServerRepository();
+
+            string response = new SimpleBotUser(repository).Reply(message);
 
             await ReplyUserAsync(activity, response);
         }

@@ -7,7 +7,7 @@ using System.Web;
 namespace SimpleBot.Repository.SqlServer
 {
     [BsonIgnoreExtraElements]
-    public class SqlServerUserProfile
+    public class UserProfileSqlServer
     {
         public int Id { get; set; }
 

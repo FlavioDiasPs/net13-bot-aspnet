@@ -1,12 +1,13 @@
 ﻿using SimpleBot.Logic;
 
-
 namespace SimpleBot.Repository.Interfaces
 {
-    interface IUserProfileRepository
+    public interface IUserProfileRepository
     {
         UserProfile GetProfile(string id);
 
-        long SetProfile(UserProfile profile);
+        bool SetProfile(UserProfile profile);
+
+        UserProfile InsertProfile(string Id);
     }
 }
